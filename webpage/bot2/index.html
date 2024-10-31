@@ -1,0 +1,25 @@
+<!-- test mit separate webpage-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript"
+        src="https://bot2-feb6a001-dc01-44de-a8db-fde4b868a50e.netlify.app/webchat.botonic.js"></script>
+<title>custom webchat</title>
+    </head>
+
+<body>
+    <h1>Test bot2</h1>
+    <div id="root" />
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function (event) {
+            Botonic.render(document.getElementById('root'), {
+                appId: 'cb4ac3b7-73a9-40d8-b7bc-d32b7f70d044',
+                // visibility: 'dynamic', Uncomment for enable dynamic settings (Botonic +0.12.0). But uncommenting will make the bot disappear from webpage
+            })
+        })
+    </script>
+</body>
+
+</html>
