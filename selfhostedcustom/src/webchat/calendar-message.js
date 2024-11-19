@@ -1,25 +1,22 @@
-import { customMessage, WebchatContext } from '@botonic/react'
-import React from 'react'
-import Calendar from 'react-calendar'
+"use strict";
 
-class CalendarMessage extends React.Component {
-  static contextType = WebchatContext
-
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = require("@botonic/react");
+var _react2 = _interopRequireDefault(require("react"));
+var _reactCalendar = _interopRequireDefault(require("react-calendar"));
+class CalendarMessage extends _react2.default.Component {
+  static contextType = _react.WebchatContext;
   render() {
-    return (
-      <>
-        <Calendar
-          onChange={date =>
-            this.context.sendText(`Booked for ${date.toLocaleDateString()}`)
-          }
-        />
-        <p>{this.props.children}</p>
-      </>
-    )
+    return /*#__PURE__*/_react2.default.createElement(_react2.default.Fragment, null, /*#__PURE__*/_react2.default.createElement(_reactCalendar.default, {
+      onChange: date => this.context.sendText(`Booked for ${date.toLocaleDateString()}`)
+    }), /*#__PURE__*/_react2.default.createElement("p", null, this.props.children));
   }
 }
-
-export default customMessage({
+var _default = exports.default = (0, _react.customMessage)({
   name: 'calendar',
-  component: CalendarMessage,
-})
+  component: CalendarMessage
+});
