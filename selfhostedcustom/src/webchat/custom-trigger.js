@@ -1,21 +1,22 @@
 import { staticAsset } from '@botonic/react'
 import React from 'react'
 
-import Icon from '../assets/trigger-button.png'
+import Icon from '../assets/chaticon.svg'
 
 export const CustomTrigger = () => {
   return (
     <div
       style={{
+        
         cursor: 'pointer',
         position: 'fixed',
-        borderRadius: '50%',
+        borderRadius: '20%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         bottom: 20,
-        right: 10,
-        background: 'transparent',
+        right: 20,
+        background: '#F2E7E4',
         width: '90px',
         height: '90px',
         flexDirection: 'column',
@@ -24,12 +25,11 @@ export const CustomTrigger = () => {
     >
       <img
         style={{
-          height: '50%',
-          width: '50%',
+          height: '75%',
         }}
         src={staticAsset(Icon)}
       />
-      <h3>I am customizable</h3>
+      
     </div>
   )
 }

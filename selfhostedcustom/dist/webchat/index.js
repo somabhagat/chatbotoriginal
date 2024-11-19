@@ -1,3 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+
+ReactDOM.render(<_default />, document.getElementById('chat-container'));
+
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
@@ -12,7 +18,7 @@ var _r2d2Logo = _interopRequireDefault(require("../assets/r2d2-logo.png"));
 var _calendarMessage = _interopRequireDefault(require("./calendar-message"));
 var _customButton = require("./custom-button");
 var _customHeader = require("./custom-header");
-var _customIntro = require("./custom-intro");
+//var _customIntro = require("./custom-intro");
 var _customReply = require("./custom-reply");
 var _customTrigger = require("./custom-trigger");
 const webchat = exports.webchat = {
@@ -61,7 +67,7 @@ const webchat = exports.webchat = {
       // style: {
       //   padding: 20
       // }
-      custom: _customIntro.CustomIntro
+      //custom: _customIntro.CustomIntro
     },
     header: {
       title: 'My customized webchat',

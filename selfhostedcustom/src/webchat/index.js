@@ -1,194 +1,140 @@
-import C3POLogo from '../assets/c3po-logo.png'
-import IntroImage from '../assets/intro-image.jpg'
-import launcherIcon from '../assets/launcher-logo.png'
-import R2D2Logo from '../assets/r2d2-logo.png'
-import CalendarMessage from './calendar-message'
-import { CustomButton } from './custom-button'
-import { CustomHeader } from './custom-header'
-import { CustomIntro } from './custom-intro'
-import { CustomReply } from './custom-reply'
-import { CustomTrigger } from './custom-trigger'
+import { CustomButton } from "./custom-button";
+import { CustomHeader } from "./custom-header";
+import { CustomIntro } from "./custom-intro";
+import { CustomTrigger } from "./custom-trigger";
 
 export const webchat = {
   theme: {
     mobileBreakpoint: 460,
     style: {
-      position: 'fixed',
+      position: "fixed",
       right: 20,
       bottom: 20,
-      width: 400,
-      height: 500,
-      margin: 'auto',
-      backgroundColor: 'white',
-      borderRadius: 25,
-      boxShadow: '0 0 50px rgba(0,0,255,.30)',
-      overflow: 'hidden',
-      backgroundImage:
-        'linear-gradient(to top, #ffffff,#ffffff 11%,#9a9ae3 40%,#0000ff 85%,#0000ff 85%)',
-      fontFamily: '"Comic Sans MS", cursive, sans-serif',
-    },
-    webview: {
-      style: {
-        top: 0,
-        right: 0,
-        height: 500,
-        width: '100%',
-      },
-      header: {
-        style: {
-          background: '#6677FF', //finde ich nicht in webchat.botonic.js
-        },
-      },
+      width: 350, // Änderungen gemäß den width Vorgaben aus Figma.
+      height: 600, // Änderungen gemäß den height Vorgaben aus Figma.
+      margin: "auto",
+      backgroundColor: "#F2E7E4", // Änderungen gemäß den Farbe Vorgaben aus Figma.
+      borderRadius: 0, // Änderungen gemäß den Vorgaben aus Figma, um die Kanten eckig zu gestalten.
+      boxShadow: 0, // Änderungen gemäß den Vorgaben aus Figma, um kein Shadow zu gestalten.
+      overflow: "hidden",
+      // backgroundImage:'linear-gradient(to top, #ffffff,#ffffff 11%,#9a9ae3 40%,#0000ff 85%,#0000ff 85%)',
+      fontFamily: '"Open Sans", sans-serif',
     },
 
-    brand: {
-      // color: 'blue',
-      image: R2D2Logo,
-    },
     triggerButton: {
-      image: launcherIcon,
-      style: {
-        width: '200px',
-      },
-      // custom: CustomTrigger,
+            custom: CustomTrigger,
     },
-    intro: {
-      // image: IntroImage,
-      // style: {
-      //   padding: 20
-      // }
-      custom: CustomIntro,
-    },
+
     header: {
-      title: 'My customized webchat',
-      subtitle: 'R2D2',
-      image: R2D2Logo,
-      style: {
-        height: 70,
-      },
-      // custom: CustomHeader
+      custom: CustomHeader,
     },
-    /*
-     * brandImage will set both headerImage and botMessageImage with its current logo
-     * you can overwrite these values by redefining them individually
-     */
+
     message: {
       bot: {
-        image: C3POLogo, // set it to 'null' to hide this image but gives error
+        image: null,
         style: {
-          border: 'none',
-          color: 'black',
-          borderRadius: '20px',
-          background: '#e1fcfb',
+          color: "black",
+          borderRadius: 0,
+          background: "#C4EAF8",
         },
       },
       user: {
         style: {
-          // border:'none',
-          color: 'white',
-          background: '#2b81b6',
-          borderRadius: '10px',
+          color: "black",
+          background: "#FFFFFF",
+          borderRadius: 0,
         },
       },
-      customTypes: [CalendarMessage],
     },
 
     button: {
       style: {
-        color: 'black',
-        background: 'white',
-        borderRadius: 20,
+        color: "black",
+        background: "#C4EAF8", // Änderungen gemäß den Vorgaben aus Figma.
+        borderRadius: 0,
       },
-      hoverBackground: '#b3fcfa',
-      hoverTextColor: 'black',
+      hoverBackground: "#47C8F6",
+      hoverTextColor: "black",
 
       // custom: CustomButton,
     },
     replies: {
-      align: 'center',
-      wrap: 'nowrap',
+      align: "center",
+      wrap: "nowrap",
     },
     reply: {
       style: {
-        color: 'black',
-        background: '#e1fcfb',
-        borderColor: 'black',
+        color: "black",
+        background: "#e1fcfb",
+        borderColor: "black",
       },
-      // custom: CustomReply,
     },
     userInput: {
       style: {
-        background: 'black',
+        background: "black",
       },
       box: {
         style: {
-          border: '2px solid #2b81b6',
-          color: '#2b81b6',
-          background: '#F0F0F0',
-          width: '90%',
-          borderRadius: 20,
-          paddingLeft: 20,
+          color: "#000000", // user input color
+          background: "#FFFFFF",
+          width: "90%", // Änderungen gemäß den Vorgaben aus Figma, um den Platzhaltertext in einer Zeile anzuzeigen.
+          // borderRadius: 20,
+          paddingLeft: 10,
           marginRight: 10,
         },
-        placeholder: 'Type something...',
+        placeholder: "Fragen Sie mich etwas",
       },
-
-      // enable: false,
-      attachments: {
-        enable: true,
-      },
-
       emojiPicker: true,
       // These are the set of inputs which are not allowed.
       blockInputs: [
         {
           match: [/ugly/i, /bastard/i],
-          message: 'We cannot tolerate these kind of words.',
+          message: "We cannot tolerate these kind of words.",
         },
       ],
       persistentMenu: [
-        { label: 'Help', payload: 'help' },
-        {
-          label: 'See docs',
-          url: 'https://botonic.io/docs/welcome/',
-        },
-        { closeLabel: 'Close' },
+        // Änderungen gemäß den Vorgaben aus Figma.
+        { label: "Was ist CONTEXTSUITE?", payload: "Was ist CONTEXTSUITE?" },
+        { label: "Was ist CONTEXTCLOUD?", payload: "Was ist CONTEXTCLOUD ?" },
+        { closeLabel: "Close" },
       ],
     },
-    scrollbar: {
-      // enable: false,
+    /* scrollbar: {
+      enable: true,
       autoHide: true,
       thumb: {
         opacity: 1,
-        // color: 'yellow',
+        color: "yellow",
         bgcolor:
-          'linear-gradient(-131deg,rgba(231, 176, 43) 0%,rgb(193, 62, 81) 100%);',
+          "yellow",
+        border: "20px",
+      },
+      track: {
+        color: 'black',
+        bgcolor:
+          'linear-gradient(-131deg,rgba(50, 40, 43) 0%,rgb(125, 62, 81) 100%);',
         border: '20px',
       },
-      // track: {
-      //   color: 'black',
-      //   bgcolor:
-      //     'linear-gradient(-131deg,rgba(50, 40, 43) 0%,rgb(125, 62, 81) 100%);',
-      //   border: '20px',
-      // },
-    },
+    }, */
   },
 
   // Webchat listeners
-  onInit: app => {
+  onInit: (app) => {
     // You can combine webchat listeners with the Webchat SDK's Api in order
     // to obtain extra functionalities. This will open automatically the webchat.
-    app.open()
+    // console.log("onInit")
+    // app.open();
+    app.addBotText(
+      "Hallo! Ich bin Sophy, eure KI-Assistentin. Ich gebe keine Rechtsberatung, aber ich bin hier, um euch bei euren Fragen bestmöglich zu helfen! 😊"
+    );
   },
-  onOpen: app => {
-    // app.addBotText('Hi human!')
-    // app.addUserText('Hi bot!')
-    // app.addUserPayload('POSTBACK_INITCHAT')
+  /* onOpen: (app) => {
+    console.log("onOpen");
   },
-  onClose: app => {
-    console.log('I have been closed!')
+  onClose: (app) => {
+    console.log("I have been closed!");
   },
-  onMessage: app => {
-    console.log('New message!')
-  },
-}
+  onMessage: (app) => {
+    console.log("New message!");
+  }, */
+};
