@@ -1,6 +1,4 @@
-import { CustomButton } from "./custom-button";
 import { CustomHeader } from "./custom-header";
-import { CustomIntro } from "./custom-intro";
 import { CustomTrigger } from "./custom-trigger";
 
 export const webchat = {
@@ -10,19 +8,18 @@ export const webchat = {
       position: "fixed",
       right: 20,
       bottom: 20,
-      width: 350, // Änderungen gemäß den width Vorgaben aus Figma.
-      height: 600, // Änderungen gemäß den height Vorgaben aus Figma.
+      width: 400, // Änderungen gemäß den width Vorgaben aus Figma.
+      height: 750, // kann nicht Anpassungsfähig machen.
       margin: "auto",
       backgroundColor: "#F2E7E4", // Änderungen gemäß den Farbe Vorgaben aus Figma.
       borderRadius: 0, // Änderungen gemäß den Vorgaben aus Figma, um die Kanten eckig zu gestalten.
       boxShadow: 0, // Änderungen gemäß den Vorgaben aus Figma, um kein Shadow zu gestalten.
-      overflow: "hidden",
-      // backgroundImage:'linear-gradient(to top, #ffffff,#ffffff 11%,#9a9ae3 40%,#0000ff 85%,#0000ff 85%)',
+      overflow: "auto",
       fontFamily: '"Open Sans", sans-serif',
     },
 
     triggerButton: {
-            custom: CustomTrigger,
+      custom: CustomTrigger,
     },
 
     header: {
@@ -45,22 +42,32 @@ export const webchat = {
           borderRadius: 0,
         },
       },
+      timestamps: {
+        enable: true,
+        format: () => {
+          return new Date().toLocaleString();
+        },
+        style: {
+          color: "#00223D", // Die gleiche Farbe wie die Kreuz oben rechts in Chatbot
+        },
+      },
     },
 
-    button: {
+    button: { // entweder die perssistent menu oder die 'To open a webview'
       style: {
-        color: "black",
-        background: "#C4EAF8", // Änderungen gemäß den Vorgaben aus Figma.
-        borderRadius: 0,
+        color: "#000000",
+        background: "#C4EAF8", // Änderungen gemäß den Vorgaben aus Figma für Contextsuite optionen.
+        cursor: "pointer",
+        whiteSpace: 'break-spaces',  // Erlaube, dass der Text der Schaltflächen umgebrochen wird. 
+        textAlign: 'left',  // Align text to the left
+        verticalAlign: 'top',  // Align text to the top
       },
       hoverBackground: "#47C8F6",
-      hoverTextColor: "black",
-
-      // custom: CustomButton,
+      hoverTextColor: "#FFFFFF",
+      wrap: "normal",
     },
     replies: {
-      align: "center",
-      wrap: "nowrap",
+      align: "left",
     },
     reply: {
       style: {
@@ -71,7 +78,7 @@ export const webchat = {
     },
     userInput: {
       style: {
-        background: "black",
+        background: "F2E7E4",
       },
       box: {
         style: {
@@ -88,16 +95,19 @@ export const webchat = {
       // These are the set of inputs which are not allowed.
       blockInputs: [
         {
-          match: [/ugly/i, /bastard/i],
-          message: "We cannot tolerate these kind of words.",
+          match: [/ugly/i, /bastard/i, /doof/i, ],
+          message: "Wir können solche Worte nicht tolerieren. Bitte höflich und professionell bleiben.",
         },
       ],
       persistentMenu: [
         // Änderungen gemäß den Vorgaben aus Figma.
-        { label: "Was ist CONTEXTSUITE?", payload: "Was ist CONTEXTSUITE?" },
-        { label: "Was ist CONTEXTCLOUD?", payload: "Was ist CONTEXTCLOUD ?" },
+        { label: "Was ist die CONTEXTSUITE?", payload: "Was ist die CONTEXTSUITE?" },
+        { label: "Für wen ist die CONTEXTSUITE die richtige Wahl?", payload: "Für wen ist die CONTEXTSUITE die richtige Wahl?" },
+        { label: "Was ist CONTEXTCLOUD?", payload: "Was ist CONTEXTCLOUD?" },
         { closeLabel: "Close" },
+        
       ],
+           
     },
     /* scrollbar: {
       enable: true,

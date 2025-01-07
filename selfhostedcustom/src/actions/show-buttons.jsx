@@ -13,9 +13,9 @@ export default class extends React.Component {
     return (
       <>
         <Text>
-          What about these buttons?
-          <Button url={'https://botonic.io/docs/concepts/webviews'}>
-            You can use me to open links
+        Worüber möchten Sie sich heute informieren?
+          <Button url={'https://www.moresophy.com/contextsuite-faq'}>
+            Klicken Sie hier für häufige Fragen zu CONTEXTSUITE und KI-Lösungen.
           </Button>
           <Button webview={MyWebview}>To open a webview</Button>
           <Button payload={'customized-payload'}>Or to send a payload</Button>

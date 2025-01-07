@@ -1,24 +1,25 @@
-import { Button, Reply, Text } from '@botonic/react'
-import React from 'react'
+import { Button, Reply, Text, RequestContext  } from '@botonic/react'
+import React, { useEffect, useState, useContext } from 'react'
+import {fetchApi} from './api.jsx'
 
+export default function Start () {
+  const [data, setData] = useState("");
+  const context = useContext(RequestContext);
+ 
+  useEffect(() => {
+   async function init() {
+    const antwort = await fetchApi(context.input.data);
+    setData(antwort);
+   }  
+    
+   init();
+  }, [])
 
-
-export default class extends React.Component {
-  render() {
     return (
       <>
         <Text>
-          This is an example bot of how to customize your webchat.
-          <Button url='https://botonic.io'>Visit botonic.io</Button>
-        </Text>
-        <Text>For example, this is a custom message type:</Text>
-     
-        <Text>
-          Something else?
-          <Reply payload='replies'>Show me replies</Reply>
-          <Reply payload='buttons'>Show me buttons</Reply>
+         {data.answer}
         </Text>
       </>
     )
-  }
 }

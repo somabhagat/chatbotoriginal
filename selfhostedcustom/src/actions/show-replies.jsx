@@ -11,12 +11,12 @@ export default class extends React.Component {
     return (
       <>
         <Text>
-          Look at these nice replies!
-          <Reply payload={'1'}>First Reply</Reply>
-          <Reply payload={'2'}>Second Reply</Reply>
-          <Reply payload={'3'}>Third Reply</Reply>
-          <Reply payload={'4'}>Fourth Reply</Reply>
-          <Reply payload={'5'}>Fifth Reply</Reply>
+          Bitte wählen Sie ihre Frage aus dieser Liste.
+          <Reply payload={'1'}>Welche Lösungen und Use-Cases unterstützt die CONTEXTSUITE?</Reply>
+          <Reply payload={'2'}>Wer arbeitet mit CONTEXSUITE?</Reply>
+          <Reply payload={'3'}>Ist die CONTEXTSUITE eine KI-Plattform?</Reply>
+          <Reply payload={'4'}>Ist die CONTEXTSUITE eine Low-Code-Plattform?</Reply>
+          <Reply payload={'5'}>Welche Standardanwendungen bietet die CONTEXTSUITE?</Reply>
         </Text>
       </>
     )
