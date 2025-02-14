@@ -5,11 +5,17 @@ import {fetchApi} from './api.jsx'
 export default function Start () {
   const [data, setData] = useState("");
   const context = useContext(RequestContext);
- 
+  
   useEffect(() => {
-   async function init() {
-    const antwort = await fetchApi(context.input.data);
-    setData(antwort);
+   async function init() 
+   {
+    let inputData = context.input?.data;
+    if (inputData) {
+      const antwort = await fetchApi(inputData);
+      setData(antwort);
+    } else {
+      console.error("Input data is not available.");
+    }
    }  
     
    init();

@@ -49,34 +49,32 @@ const BOTONIC_LIBRARY_NAME = 'Botonic'
 const WEBCHAT_FILENAME = 'webchat.botonic.js'
 function botonicSelfHostedConfig(mode) {
   return {
-    optimization: optimizationConfig,
     mode: mode,
-    devtool: sourceMap(mode),
+    optimization: optimizationConfig,
+    entry: path.resolve(WEBPACK_ENTRIES_DIRNAME, WEBPACK_ENTRIES.DEV),
     target: 'web',
-    entry: path.resolve('webpack-entries', 'self-hosted-entry.js'),
     module: {
       rules: [
         babelLoaderConfig,
-        fileLoaderConfig(path.join('..', ASSETS_DIRNAME)),
+        fileLoaderConfig(path.join('.', ASSETS_DIRNAME)),
         stylesLoaderConfig,
       ],
     },
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'webchat.botonic.js',
-      library: 'Botonic',
-      libraryTarget: 'umd',
+      filename: WEBCHAT_FILENAME,
+      library: BOTONIC_LIBRARY_NAME,
+      libraryTarget: UMD_LIBRARY_TARGET,
       libraryExport: 'app',
+      path: OUTPUT_PATH,
       publicPath: './',
     },
     resolve: resolveConfig,
     plugins: [
       imageminPlugin,
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('production'),
         IS_BROWSER: true,
+        IS_NODE: false,
         HUBTYPE_API_URL: null,
-        BOTONIC_TARGET: BOTONIC_TARGETS.DEV,
       }),
       new webpack.ProvidePlugin({
         process: 'process/browser',

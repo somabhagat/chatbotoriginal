@@ -2,7 +2,7 @@
   "name": "selfhostedcustom",
   "version": "1.0.0",
   "scripts": {
-    "build:self-hosted": "webpack --env target=self-hosted --mode=production && babel src -d dist --extensions \".js,.jsx,.ts,.tsx\"",
+    "build:self-hosted": "webpack --env target=self-hosted --mode=production",
     "build": "webpack --env target=all --mode=production",
     "start": "webpack-dev-server --env target=dev --mode=development",
     "deploy": "botonic deploy -c build",
