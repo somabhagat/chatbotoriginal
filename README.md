@@ -1,2 +1,2 @@
 # chatbot
-Creating a chatbot and bilding it to the wordpress website via a plugin
+Creating a chatbot and binding it to the nginx server in docker
