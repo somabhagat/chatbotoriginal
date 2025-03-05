@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xtra-Gold | Startseite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="images/logo.png" alt="Xtra-Gold Logo" class="logo">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Produkt</a></li>
+                    <li><a href="#">Gold-News</a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">ESG</a></li>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Prospekt</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="top-menu">
+            <span>+49-(0) 123 456 7890</span>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="Banner">
+        <div class="container">
+            <img src="images/banner.jpg" alt="Xtra-Gold Banner" class="banner-image">
+            <h2>Xtra-Gold® – Eine effiziente Art, in Gold zu investieren</h2>
+            <p>Xtra-Gold ist ein Wertpapier, welches einfach wie eine Aktie handelbar ist...</p>
+            <a href="#produktinfo" class="cta-button">Mehr erfahren</a>
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section id="produktinfo" class="content">
+        <div class="container">
+            <h3>Produktinformation</h3>
+            <p>Ihre Vorteile bei Xtra-Gold®</p>
+            <ul>
+                <li>Kostengünstiger Handel</li>
+                <li>Einfacher und flexibler Kauf/Verkauf</li>
+                <li>Liquider Handel</li>
+                <li>Physische Hinterlegung</li>
+                <li>Hohe Produkttransparenz</li>
+                <li>Handelbarkeit in Euro pro Gramm</li>
+                <li>Stabiler Bestand</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gold Market Information Section -->
+    <section id="gold-market-info" class="content">
+        <div class="container">
+            <h3>Gold Market Information</h3>
+            <div class="market-info">
+                <div class="market-data">
+                    <h4>Current Gold Price</h4>
+                    <p>As of February 17, 2025:</p>
+                    <ul>
+                        <li>Price per gram: €82.74</li>
+                        <li>Price per ounce: $2,753</li>
+                    </ul>
+                </div>
+                <div class="market-image">
+                    <img src="images/market.jpg" alt="Gold Price Chart" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>Newsletter</h3>
+            <p>Bleiben Sie informiert mit unserem Newsletter.</p>
+            <img src="images/newsletter.jpg" alt="Newsletter" class="newsletter-image">
+            <form>
+                <input type="email" placeholder="Ihre E-Mail-Adresse" required>
+                <button type="submit">Abonnieren</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Hotline Section -->
+    <section class="hotline">
+        <div class="container">
+            <h3>Xtra-Gold Hotline</h3>
+            <img src="images/hotline.jpg" alt="Xtra-Gold-Hotline">
+            <p>Do you have questions? We have the answers. Contact us here: 9 a.m.–6 p.m. CET</p>
+            <p><strong>+49-(0) 123 456 7890</strong></p>
+            <p>Email: <a href="mailto:xtra-gold@deutsche-boerse.com">xtra-gold(at)deutsche-boerse.com</a></p>
+            <p>For press inquiries: <a href="mailto:media-relations@deutsche-boerse.com">media-relations(at)deutsche-boerse.com</a></p>
+            <p><a href="#">To contact form</a></p>
+            <p>Follow us: <a href="#">YouTube</a> | <a href="#">Twitter</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Xtra-Gold. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Botonic Chatbot Integration -->
+    <script src="./selfhostedcustom/dist/webchat.botonic.js"></script>
+    <div id="root"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Botonic.render(document.getElementById('root'));
+        });
+    </script>
+</body>
+</html>

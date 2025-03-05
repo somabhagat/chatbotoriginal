@@ -1,0 +1,257 @@
+/* Global Styles */
+body {
+    background-color: black; /* Sets the background color of the page */
+    color: rgba(255, 217, 0, 0.801); /* Goldish text color for contrast */
+    font-family: 'Roboto', sans-serif; /* Uses Roboto font for better readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for layout alignment */
+.container {
+    width: 90%; /* Responsive width */
+    max-width: 1200px;
+    margin: auto; /* Centers the content */
+    padding: 20px;
+}
+
+/* Top menu styling */
+.top-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #111; /* Dark background */
+    text-align: center;
+}
+
+.top-menu .contact-info {
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.top-menu .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.top-menu a {
+    color: rgba(255, 217, 0, 0.801);
+    text-decoration: none;
+    margin: 5px;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 225px;
+    height: auto;
+    margin-left: 0;
+}
+
+/* Navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    font-size: 140%;
+    color: rgba(255, 217, 0, 0.801);
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(255, 217, 0, 0.801);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+/* banner section */
+.banner {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover; /* Ensures proper resizing */
+}
+
+/* General typography */
+h2, h3 {
+    text-align: center;
+    color: rgba(255, 217, 0, 0.801);
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Call-to-action button */
+.cta-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: rgba(255, 217, 0, 0.801);
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: white;
+}
+
+/* Content section styling */
+.content-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-image, .market-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.market-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.market-data {
+    list-style: none;
+    font-size: 22px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: rgba(255, 217, 0, 0.801);
+}
+
+/* Hotline section */
+.hotline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #111;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hotline img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.hotline .hotline-text {
+    flex: 1;
+    color: rgba(255, 217, 0, 0.801);
+    text-align: center;
+}
+
+/* Newsletter section */
+.newsletter img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(255, 217, 0, 0.801);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.newsletter button {
+    width: 80%;
+    max-width: 200px;
+    padding: 10px;
+    background-color: rgba(255, 217, 0, 0.801);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .top-menu {
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hotline {
+        flex-direction: column;
+        text-align: center;
+    }
+}
