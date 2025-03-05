@@ -1,0 +1,21 @@
+{
+  "name": "selfhostedcustom",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "webpack --env target=all --mode=production",
+    "start": "webpack-dev-server --env target=dev --mode=development",
+    "deploy": "botonic deploy -c build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.23.9",
+    "@botonic/react": "^0.30.0",
+    "react-calendar": "2.19.2"
+  },
+  "devDependencies": {
+    "@botonic/dx": "^0.30.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
